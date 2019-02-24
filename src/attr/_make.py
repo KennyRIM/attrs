@@ -1480,7 +1480,7 @@ def _attrs_to_init_script(
         if a.validator:
             attrs_to_validate.append(a)
         attr_name = a.name
-        arg_name = a.name.lstrip("_")
+        arg_name = attr_name #a.name.lstrip("_")
         has_factory = isinstance(a.default, Factory)
         if has_factory and a.default.takes_self:
             maybe_self = "self"
